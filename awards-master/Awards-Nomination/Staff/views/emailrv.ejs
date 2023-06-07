@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      #back {
+        width: 200px;
+        margin-top: 50px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+      }
+      .user-detail h2 {
+        padding: 20px;
+        margin-left: 170px;
+      }
+      .user-detail {
+        height: 80vh;
+        background-color: rgb(254, 255, 251);
+        width: 100%;
+        height: 100%;
+      }
+
+      textarea {
+        height: 150px;
+        margin: 0px;
+        padding-top: 20px;
+      }
+
+      input,
+      textarea {
+        width: 50%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+
+      input {
+        width: 50%;
+      }
+
+      button[type="submit"] {
+        background-color: #434140;
+        color: #ffffff;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+        opacity: 0.9;
+        font-size: 20px;
+      }
+      label {
+        font-size: 18px;
+        position: relative;
+      }
+      button[type="submit"]:hover {
+        background-color: #3d3c3c;
+        margin-bottom: 50px;
+      }
+      body {
+        background-color: rgb(242, 243, 241);
+      }
+      .header {
+        width: 100%;
+        height: 120px;
+        display: block;
+        background: gold;
+      }
+
+      .logo {
+        position: absolute;
+        margin-top: -50px;
+        margin-left: 10px;
+        float: left;
+      }
+
+      nav {
+        height: 100%;
+        overflow: auto;
+      }
+
+      .text {
+        text-align: center;
+        font-family: Tahoma, Geneva, sans-serif;
+        padding-top: 30px;
+      }
+    </style>
+  </head>
+  <div class="header">
+    <div class="text">
+      <h1>Commerce Department Awards Nominations</h1>
+    </div>
+    <div class="logo">
+      <a href="#"
+        ><img
+          src="https://www.otago.ac.nz/cs/groups/public/@otagobulletineditor/documents/contributorimg/otago655388.jpg"
+          width="125"
+          height="60"
+        />
+      </a>
+    </div>
+    <div style="float: right" id="back">
+      <form action="/recipientsrv" method="GET">
+        <button class="button" type="submit">Back</button>
+      </form>
+    </div>
+  </div>
+
+  <body>
+    <!--====form section start====-->
+    <div class="user-detail">
+      <center><h2>Email</h2></center>
+
+      <hr />
+      <br />
+      <form action="/emailrv" method="POST">
+        <center>
+          <label id="to">To: </label>
+        </center>
+        <center>
+          <input type="text" placeholder="Email Address" name="to" required />
+        </center>
+        <center>
+          <label>Subject: </label>
+        </center>
+        <center><input type="text" name="subject" required /></center>
+        <center>
+          <label>Message: </label>
+        </center>
+        <center>
+          <textarea type="text" placeholder="message" name="message" required>
+          </textarea>
+        </center>
+        <center><button type="submit">Send and Email</button></center>
+      </form>
+    </div>
+  </body>
+</html>

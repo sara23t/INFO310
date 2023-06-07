@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+    body {
+      background-color: #ffffff;
+      font-family: Tahoma, Geneva, sans-serif;
+      margin: 0px;
+    }
+ 
+    .table-data h1 {
+      text-align: center;
+      color: #4b554c;
+      font-size: 40px;
+      padding: 20px 0 20px 0;
+      width: 800px;
+      margin-left: -29px;
+      margin-top: 40px;
+      margin-bottom: 0px;
+    }
+ 
+    tr:nth-child(even) {
+      background-color: #ffffff;
+    }
+ 
+    th,
+    td {
+      border-bottom: 1px solid rgb(25, 24, 24);
+      padding: 4px;
+    }
+ 
+    .wrapper {
+      min-height: calc(100vh - 160px);
+    }
+ 
+    footer {
+      height: 10px;
+    }
+    .header{
+        width: 100%;
+        height: 120px;
+        display: block;
+        background: gold;
+      }
+ 
+      .logo{
+        position: absolute;
+        margin-top: -80px;
+        margin-left: 10px;
+        float: left;
+      }
+      
+      nav{
+        height: 100%;
+        overflow: auto;
+      }
+ 
+      .text{
+        text-align: center;
+        padding-top: 15px;
+        margin-top: -25px;
+        margin-left: 10px;
+ 
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li form:hover:not(.active) {
+        background-color: gold;
+      }
+
+      #active {
+        background-color: gold;
+        color: rgb(30, 28, 28);
+      }
+      .button {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background-color: #535461;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 0px 1px;
+        cursor: pointer;
+      }
+  </style>
+</head>
+  <div class="header">
+    <div class ="text">
+      <h1> Commerce Department Awards Nominations</h1>
+    </div>
+          <div class="logo"><a href="#"><img src="https://www.otago.ac.nz/cs/groups/public/@otagobulletineditor/documents/contributorimg/otago655388.jpg" width="125" height="60" /></a>
+          </div>
+          <nav>
+      <ul>
+        <li>
+          <form action="/displayst" method="GET">
+            <center>
+              <input
+              id="active"
+                class="button"
+                type="submit"
+                value="Award Table"
+              />
+            </center>
+          </form>
+        </li>
+
+        <li>
+          <form action="/nominate" method="GET">
+            <center>
+              <input class="button" type="submit" value="Nominate" />
+            </center>
+          </form>
+        </li>
+        <li style="float: right">
+          <form action="logout" method="GET">
+            <center>
+              <input class="button" type="submit" value="Logout" />
+            </center>
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <body>
+    <div class="wrapper">
+      <div class="table-data">
+        <center><h1>Awards</h1></center>
+        <table align="center">
+          <tr>
+            <th>Award Name</th>
+            <th>Description</th>
+            <th>Closing Date</th>
+          </tr>
+
+          <% userData.forEach(function(data){ %>
+          <tr>
+            <td><%=data.awardName %></td>
+            <td><%=data.description %></td>
+            <td><%=data.closingDate %></td>
+          </tr>
+          <% }) %>
+        </table>
+      </div>
+      
+  </body>
+</html>

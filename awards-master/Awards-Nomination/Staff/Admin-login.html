@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #ffffff;
+        margin: 0px;
+      }
+      .login {
+        width: 280px;
+        margin: 0 auto;
+        font-family: Tahoma, Geneva, sans-serif;
+      }
+      .login h1 {
+        text-align: center;
+        color: #4b554c;
+        font-size: 30px;
+        padding: 20px 0 20px 0;
+        padding: 20px;
+        width: 300px;
+        margin-left: -29px;
+        margin-top: 60px;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"] {
+        height: 30px;
+        width: 290px;
+        margin: 70px;
+        margin-left: -10px;
+        margin-top: 20px;
+        margin-bottom: 8px;
+      }
+      input[type="password"] {
+        height: 30px;
+        width: 290px;
+        margin: 70px;
+        margin-left: -10px;
+        margin-top: 20px;
+        margin-bottom: 60px;
+      }
+      .login input[type="submit"] {
+        width: 130px;
+        height: 80px;
+        padding: 20px;
+        margin: 70px;
+        margin-left: 70px;
+        margin-top: -30px;
+        margin-bottom: 40px;
+        font-size: 20px;
+        background-color: #27282a;
+        border: 0;
+        cursor: pointer;
+        font-weight: bold;
+        color: #fffefe;
+      }
+      .header {
+        width: 100%;
+        height: 120px;
+        display: block;
+        background: gold;
+      }
+
+      .logo {
+        position: absolute;
+        margin-top: -50px;
+        margin-left: 10px;
+        float: left;
+      }
+
+      nav {
+        height: 100%;
+        overflow: auto;
+      }
+
+      .text h1 {
+        text-align: center;
+        font-family: Tahoma, Geneva, sans-serif;
+        padding-top: 30px;
+        margin: 0px;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li form:hover:not(.active) {
+        background-color: gold;
+      }
+
+      #active {
+        background-color: gold;
+        color: rgb(30, 28, 28);
+      }
+      .button {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background-color: #535461;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 0px 1px;
+        cursor: pointer;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1" />
+    <title>Admin Login</title>
+  </head>
+  <div class="header">
+    <div class="text">
+      <h1>Commerce Department Awards Nominations</h1>
+    </div>
+    <div class="logo">
+      <a href="#"
+        ><img
+          src="https://www.otago.ac.nz/cs/groups/public/@otagobulletineditor/documents/contributorimg/otago655388.jpg"
+          width="125"
+          height="60"
+      /></a>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li style="float: right">
+        <form action="/" method="GET">
+          <input class="button" type="submit" value="Home" />
+        </form>
+      </li>
+    </ul>
+  </nav>
+
+  <body>
+    <div class="login">
+      <h1>Admin Login</h1>
+      <form action="login" method="POST" class="formss">
+        <div>
+          <input type="text" name="username" placeholder="Username" required />
+          <p></p>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <p></p>
+          <input type="submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
